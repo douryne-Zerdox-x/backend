@@ -1,0 +1,17 @@
+{
+	"name": "hyperzoom",
+	"module": "src/index.ts",
+	"type": "module",
+	"scripts": {
+		"dev": "bun run --hot src/index.ts",
+		"dev:expose-localhost": "bun run --hot --origin http://192.168.166.128 src/index.ts",
+		"build": "bun build --target=bun ./src/index.ts --outfile=./dist/index.ts",
+		"preview": "bun run ./dist/index.ts"
+	},
+	"devDependencies": {
+		"bun-types": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "5.2.2"
+	}
+}
